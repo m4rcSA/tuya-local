@@ -1,0 +1,128 @@
+name: Diamond Smart Water Heater
+products:
+  - id: dvho7sizrrjgeltu
+    manufacturer: Emelson
+    model: DIAMOND SMART 80l
+    model_id: EML-TV-80DIA
+entities:
+  - entity: water_heater
+    icon: "mdi:water-boiler"
+    dps:
+    # DP 1: Power
+      - id: 1
+        type: boolean
+        name: operation_mode
+        mapping:
+        - dps_val: false
+          value: "off"
+        - dps_val: true
+          constraint: mode
+          conditions:
+            - dps_val: ECO_SMART
+              value: "Eco Smart"
+            - dps_val: TIMER
+              value: Timer
+            - dps_val: STD
+              value: Standard
+              default: true
+      # DP 2: Target Temperature
+      - id: 2
+        type: integer
+        name: temperature
+        range: 
+          min: 30
+          max: 75
+      # DP 3: Current Temperature
+      - id: 3
+        type: integer
+        name: current_temperature
+      # DP 4: Operation Mode
+      - id: 4
+        type: string
+        name: mode
+        hidden: true
+  # Working Status Sensor
+  - entity: sensor
+    name: "Working Status"
+    icon: "mdi:hvac"
+    dps:
+      - id: 5
+        type: string
+        name: value
+        mapping:
+          - dps_val: 1
+            value: "Heating"
+          - dps_val: 2
+            value: "Idle/Warm"
+
+  # Fault Status Sensor
+  - entity: binary_sensor
+    name: "Fault Status"
+    class: problem
+    category: diagnostic
+    dps:
+      - id: 9
+        type: string
+        name: value
+        mapping:
+          - dps_val: 0
+            value: "E1"
+          - dps_val: 1
+            value: "E2"
+
+  # Antifreeze Status Sensor
+  - entity: sensor
+    name: "Antifreeze Status"
+    icon: "mdi:snowflake-thermometer"
+    dps:
+      - id: 101
+        type: string
+        name: value
+        mapping:
+          - dps_val: CLOSE
+            value: "Inactive"
+          - dps_val: OPEN
+            value: "Active"
+
+  # Timer Start Hour Number Input
+  - entity: number
+    name: "Timer Start Hour"
+    category: config
+    icon: "mdi:clock-start"
+    mode: box
+    dps:
+      - id: 102
+        type: integer
+        name: value
+        unit: h
+        range:
+          min: 0
+          max: 23
+        mapping:
+          - step: 1
+
+  # Timer End Hour Number Input
+  - entity: number
+    name: "Timer End Hour"
+    category: config
+    icon: "mdi:clock-end"
+    mode: box
+    dps:
+      - id: 103
+        type: integer
+        name: value
+        unit: h
+        range:
+          min: 0
+          max: 23
+        mapping:
+          - step: 1
+
+  # Placeholder DP Sensor (Diagnostic)
+  - entity: binary_sensor
+    name: "DP 104 Status"
+    category: diagnostic
+    dps:
+      - id: 104
+        type: bool
+        name: value
