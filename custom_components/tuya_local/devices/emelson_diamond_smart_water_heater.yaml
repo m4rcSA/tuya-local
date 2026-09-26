@@ -19,11 +19,11 @@ entities:
           constraint: mode
           conditions:
             - dps_val: ECO_SMART
-              value: "Eco Smart"
+              value: eco
             - dps_val: TIMER
-              value: Timer
+              value: timer
             - dps_val: STD
-              value: Standard
+              value: performance
               default: true
       # DP 2: Target Temperature
       - id: 2
@@ -41,20 +41,26 @@ entities:
         type: string
         name: mode
         hidden: true
+      - id: 101
+        type: string
+        name: away_mode
+        mapping:
+          - dps_val: "CLOSE"
+            value: false
+          - dps_val: "OPEN"
+            value: true
   # Working Status Sensor
-  - entity: sensor
-    name: "Working Status"
-    icon: "mdi:hvac"
+  - entity: binary_sensor
+    class: running
     dps:
       - id: 5
         type: string
-        name: value
+        name: sensor
         mapping:
-          - dps_val: 1
-            value: "Heating"
-          - dps_val: 2
-            value: "Idle/Warm"
-
+          - dps_val: "1"
+            value: false
+          - dps_val: "2"
+            value: true
   # Fault Status Sensor
   - entity: binary_sensor
     name: "Fault Status"
