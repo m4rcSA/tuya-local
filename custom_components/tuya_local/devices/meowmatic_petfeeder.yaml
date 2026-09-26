@@ -4,9 +4,8 @@ products:
     manufacturer: Meowmatic
 entities:
   - entity: text
-    name: Meal plan
+    translation_key: meal_plan
     category: config
-    icon: "mdi:calendar-clock"
     hidden: true
     dps:
       - id: 1
@@ -108,7 +107,7 @@ entities:
         type: boolean
         name: switch
   - entity: event
-    name: Notification
+    translation_key: notification
     dps:
       - id: 212
         type: utf16b64

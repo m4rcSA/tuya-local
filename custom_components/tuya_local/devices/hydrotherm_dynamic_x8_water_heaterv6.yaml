@@ -5,7 +5,6 @@ products:
     model: Dynamic X8 gen 6
 entities:
   - entity: water_heater
-    translation_only_key: hot_water
     dps:
       - id: 1
         type: boolean
@@ -129,7 +128,7 @@ entities:
         unit: C
         class: measurement
   - entity: sensor
-    name: Inlet temperature
+    translation_key: inlet_temperature
     class: temperature
     category: diagnostic
     dps:
@@ -139,7 +138,7 @@ entities:
         unit: C
         class: measurement
   - entity: sensor
-    name: Outlet temperature
+    translation_key: outlet_temperature
     class: temperature
     category: diagnostic
     dps:

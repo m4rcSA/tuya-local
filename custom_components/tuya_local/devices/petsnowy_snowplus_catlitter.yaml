@@ -5,9 +5,8 @@ products:
     model: Snow+
 entities:
   - entity: switch
-    name: Auto clean
+    translation_key: auto_clean
     category: config
-    icon: "mdi:flower"
     dps:
       - id: 4
         type: boolean
@@ -70,9 +69,8 @@ entities:
         type: boolean
         name: button
   - entity: event
-    name: Notification
+    translation_key: notification
     category: diagnostic
-    icon: "mdi:eye-circle-outline"
     dps:
       - id: 21
         type: bitfield
@@ -157,7 +155,7 @@ entities:
             value: Trouble removal
           - value: Unknown
   - entity: sensor
-    name: Status
+    translation_key: status
     category: diagnostic
     dps:
       - id: 24
@@ -178,7 +176,7 @@ entities:
       - id: 102
         name: sensor
         type: integer
-        unit: day
+        unit: d
   - entity: lock
     translation_key: child_lock
     category: config

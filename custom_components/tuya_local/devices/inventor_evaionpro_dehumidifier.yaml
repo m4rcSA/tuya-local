@@ -1,8 +1,12 @@
 name: Dehumidifier
-# products: Inventor Eva Ion Pro
+products:
+  - id: mmm72scanusbicie
+    manufacturer: Inventor
+    model: Eva II Pro
 entities:
   - entity: humidifier
     class: dehumidifier
+    translation_only_key: extended
     dps:
       - id: 1
         type: boolean
@@ -22,7 +26,7 @@ entities:
           - dps_val: manual
             value: normal
           - dps_val: continuous
-            value: boost
+            value: continuous
           - dps_val: smart
             value: auto
           - dps_val: drying

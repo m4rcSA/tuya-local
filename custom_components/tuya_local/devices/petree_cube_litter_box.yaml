@@ -73,7 +73,7 @@ entities:
           min: 0
           max: 1439
   - entity: switch
-    name: Beep
+    translation_key: sound
     category: config
     dps:
       - id: 108
@@ -121,12 +121,12 @@ entities:
         name: sensor
   - entity: sensor
     class: temperature
-    category: diagnostic
     dps:
       - id: 121
         type: integer
         name: sensor
         unit: C
+        class: measurement
         mapping:
           - scale: 10
   - entity: button

@@ -9,6 +9,7 @@ entities:
   # Main dehumidifier entity exposed to Home Assistant
   - entity: humidifier
     class: dehumidifier
+    translation_only_key: extended
     dps:
       # Power on/off
       - id: 1
@@ -69,6 +70,7 @@ entities:
         name: sensor
         type: integer
         unit: C
+        class: measurement
 
   # Countdown timer in hours
   - entity: number

@@ -52,6 +52,9 @@ entities:
             value: idle
           - dps_val: "1"
             value: heating
+      - id: 21
+        type: integer
+        name: max_temperature
   - entity: lock
     translation_key: child_lock
     category: config
@@ -60,9 +63,8 @@ entities:
         type: boolean
         name: lock
   - entity: switch
-    name: Sound
+    translation_key: sound
     category: config
-    icon: "mdi:music-note"
     dps:
       - id: 13
         type: boolean

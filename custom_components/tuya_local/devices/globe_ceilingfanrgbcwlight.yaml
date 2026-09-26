@@ -86,7 +86,7 @@ entities:
       - id: 34
         type: boolean
         name: switch
-  - entity: switch
+  - entity: light
     translation_key: nightlight
     dps:
       - id: 53

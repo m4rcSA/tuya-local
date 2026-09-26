@@ -133,22 +133,23 @@ entities:
   - entity: sensor
     name: External temperature
     class: temperature
-    category: diagnostic
     dps:
       - id: 101
         type: integer
         name: sensor
         unit: C
+        class: measurement
         mapping:
           - scale: 10
   - entity: number
     translation_key: temperature_calibration
+    class: temperature_delta
     category: config
     dps:
       - id: 102
         type: integer
         name: value
-        unit: °
+        unit: C
         range:
           min: -90
           max: 90

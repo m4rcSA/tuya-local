@@ -69,7 +69,6 @@ entities:
   - entity: sensor
     category: diagnostic
     name: Power level
-    class: power_factor
     dps:
       - id: 109
         type: integer
@@ -83,6 +82,7 @@ entities:
       - id: 112
         type: integer
         name: sensor
+        class: measurement
       - id: 106
         name: unit
         type: string
@@ -99,6 +99,7 @@ entities:
       - id: 113
         name: sensor
         type: integer
+        class: measurement
       - id: 106
         name: unit
         type: string
@@ -109,12 +110,13 @@ entities:
             value: C
   - entity: sensor
     category: diagnostic
-    name: Outlet water temperature
+    translation_key: outlet_temperature
     class: temperature
     dps:
       - id: 114
         name: sensor
         type: integer
+        class: measurement
       - id: 106
         name: unit
         type: string
@@ -124,13 +126,13 @@ entities:
           - dps_val: c
             value: C
   - entity: sensor
-    category: diagnostic
-    name: Ambient temperature
+    translation_key: ambient_temperature
     class: temperature
     dps:
       - id: 115
         name: sensor
         type: integer
+        class: measurement
       - id: 106
         name: unit
         type: string
@@ -147,6 +149,7 @@ entities:
       - id: 118
         name: sensor
         type: integer
+        class: measurement
       - id: 106
         name: unit
         type: string
@@ -163,6 +166,7 @@ entities:
       - id: 119
         name: sensor
         type: integer
+        class: measurement
       - id: 106
         name: unit
         type: string
@@ -179,6 +183,7 @@ entities:
       - id: 120
         name: sensor
         type: integer
+        class: measurement
       - id: 106
         name: unit
         type: string

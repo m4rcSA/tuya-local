@@ -133,7 +133,7 @@ entities:
         type: integer
         name: sensor
         unit: kWh
-        class: measurement
+        class: total_increasing
         mapping:
           - scale: 100
       - id: 127
@@ -204,12 +204,13 @@ entities:
         name: lock
   - entity: number
     translation_key: temperature_calibration
+    class: temperature_delta
     category: config
     dps:
       - id: 117
         type: integer
         name: value
-        unit: °
+        unit: C
         range:
           min: -50
           max: 50

@@ -33,7 +33,6 @@ entities:
         optional: true
   - entity: sensor
     class: battery
-    category: diagnostic
     dps:
       - id: 4
         type: integer
@@ -123,12 +122,13 @@ entities:
             value: normal
   - entity: number
     translation_key: temperature_calibration
+    class: temperature_delta
     category: config
     dps:
       - id: 23
         type: integer
         name: value
-        unit: °
+        unit: C
         range:
           min: -20
           max: 20

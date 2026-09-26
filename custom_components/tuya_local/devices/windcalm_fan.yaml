@@ -27,11 +27,19 @@ entities:
           min: 0
           max: 540
   - entity: switch
-    name: Beep
-    icon: "mdi:bell"
+    translation_key: sound
     category: config
+    hidden: unavailable
     dps:
       - id: 66
         type: boolean
         name: switch
         optional: true
+      - id: 66
+        type: boolean
+        optional: true
+        name: available
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true

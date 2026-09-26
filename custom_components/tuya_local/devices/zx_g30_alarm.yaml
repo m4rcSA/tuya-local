@@ -3,7 +3,7 @@ products:
   - id: mw27s3tus4bb7nz3
     model: ZX-G30
     name: Dual-network security system
-  - id: wifech3utowiyknu
+  - id: k4sgazda1kfo2fcr
     manufacturer: Tugard
     model: G30
 entities:
@@ -19,6 +19,8 @@ entities:
             value: armed_away
           - dps_val: home
             value: armed_home
+          - dps_val: sos
+            value: triggered
       - id: 22
         type: integer
         name: call_looptimes

@@ -64,7 +64,7 @@ entities:
           - dps_val: false
             value: true
   - entity: light
-    translation_key: display_light
+    translation_key: backlight
     category: config
     dps:
       - id: 102

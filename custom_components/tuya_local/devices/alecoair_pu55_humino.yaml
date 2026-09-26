@@ -64,6 +64,8 @@ entities:
 
   - entity: sensor
     class: humidity
+    deprecated: humidifier.current_humidity  # 2026-07-12
+    category: diagnostic
     dps:
       - id: 13
         name: sensor
@@ -105,7 +107,7 @@ entities:
         type: boolean
 
   - entity: switch
-    name: Mute
+    translation_key: sound
     category: config
     dps:
       - id: 28
@@ -113,9 +115,9 @@ entities:
         type: boolean
         mapping:
           - dps_val: true
-            icon: mdi:volume-variant-off
+            value: false
           - dps_val: false
-            icon: mdi:volume-medium
+            value: true
 
   - entity: light
     translation_key: display

@@ -46,7 +46,6 @@ entities:
         type: integer
         name: temp_current_f
   - entity: water_heater
-    translation_only_key: hot_water
     dps:
       - id: 7
         name: operation_mode
@@ -136,7 +135,7 @@ entities:
         type: bitfield
         name: fault_code
   - entity: sensor
-    name: Inlet temperature
+    translation_key: inlet_temperature
     class: temperature
     category: diagnostic
     dps:
@@ -155,7 +154,7 @@ entities:
         unit: C
         class: measurement
   - entity: sensor
-    name: Outlet temperature
+    translation_key: outlet_temperature
     class: temperature
     category: diagnostic
     dps:
