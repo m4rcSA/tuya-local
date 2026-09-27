@@ -130,5 +130,5 @@ entities:
     category: diagnostic
     dps:
       - id: 104
-        type: bool
+        type: boolean
         name: value
