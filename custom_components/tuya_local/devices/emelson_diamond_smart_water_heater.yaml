@@ -13,18 +13,18 @@ entities:
         type: boolean
         name: operation_mode
         mapping:
-        - dps_val: false
-          value: "off"
-        - dps_val: true
-          constraint: mode
-          conditions:
-            - dps_val: ECO_SMART
-              value: eco
-            - dps_val: TIMER
-              value: timer
-            - dps_val: STD
-              value: performance
-              default: true
+          - dps_val: false
+            value: "off"
+          - dps_val: true
+            constraint: mode
+            conditions:
+              - dps_val: ECO_SMART
+                value: eco
+              - dps_val: TIMER
+                value: timer
+              - dps_val: STD
+                value: performance
+                default: true
       # DP 2: Target Temperature
       - id: 2
         type: integer
