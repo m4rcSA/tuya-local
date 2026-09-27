@@ -29,7 +29,7 @@ entities:
       - id: 2
         type: integer
         name: temperature
-        range: 
+        range:
           min: 30
           max: 75
       # DP 3: Current Temperature
